@@ -1,0 +1,9 @@
+<%=ENV['RACK_ENV']%>:
+  sessions:
+    default:
+      database: content
+      hosts: 
+        - <%="#{ENV['CONTENT_MONGO_HOST']}:#{ENV['CONTENT_MONGO_PORT']}"%>
+      username: <%= "#{ENV['CONTENT_MONGO_USERNAME']}" %>
+      password: <%= "#{ENV['CONTENT_MONGO_PASSWORD']}" %>
+      options:

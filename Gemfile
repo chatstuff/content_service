@@ -12,10 +12,13 @@ source 'https://rubygems.org'
 
 # Project requirements
 gem 'rake'
+gem 'thin'
+gem 'passenger'
 
 # Component requirements
 gem 'slim'
-gem 'mongoid', '~>3.0.0'
+gem 'mongoid'
+gem 'dotenv'
 
 # Test requirements
 

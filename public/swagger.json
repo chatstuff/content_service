@@ -1,0 +1,80 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "API documentation for content service",
+        "title": "content_service",
+        "version": "1.0.0",
+        "contact": {
+            "email": "neerajkumaragarwal1990@gmail.com"
+        }
+    },
+    "host": "localhost:3001",
+    "basePath": "/",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/categories": {
+            "get": {
+                "summary": "gets you the list of categories",
+                "description": "TBA",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "422": {
+                        "description": "Something went wrong"
+                    }
+                }
+            }
+        },
+        "/category": {
+            "post": {
+                "summary": "creates a new category",
+                "description": "TBA",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                      "name": "save_name",
+                      "in": "formData",
+                      "description": "Save name for tech use",
+                      "required": true,
+                      "type": "string"
+                    },
+                    {
+                      "name": "display_name",
+                      "in": "formData",
+                      "description": "Display name for end user",
+                      "required": true,
+                      "type": "string"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "422": {
+                        "description": "Something went wrong"
+                    }
+                }
+            }
+        }
+    }
+}
